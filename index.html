@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santa Inés - Servicio de Enfermería Geriátrica</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        nursing: {
+                            light: '#e1effa',   // Azul muy claro para fondos
+                            DEFAULT: '#1a63a6', // Azul medio
+                            dark: '#124b82',    // Azul oscuro
+                            darker: '#0a3663'   // Azul marino (Color exacto del logo)
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Segoe UI', 'Tahoma', 'Geneva', 'Verdana', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.5s ease-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+
+    <!-- NAVBAR MODIFICADO: Fondo blanco para integrar el logo a la perfección -->
+    <nav class="bg-white text-nursing-darker sticky top-0 z-50 shadow-md border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-6 py-2 flex justify-between items-center">
+            <div class="flex items-center">
+                <!-- LOGO INTEGRADO AQUÍ -->
+                <img src="LOGO.png" alt="Santa Inés - Servicio de Enfermería Geriátrica" class="h-16 md:h-20 w-auto object-contain">
+            </div>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#servicios" class="text-sm font-semibold text-slate-600 hover:text-nursing-DEFAULT transition">Servicios</a>
+                <a href="#cuidados" class="text-sm font-semibold text-slate-600 hover:text-nursing-DEFAULT transition">Cuidados</a>
+                <a href="#diagnosticos" class="text-sm font-semibold text-slate-600 hover:text-nursing-DEFAULT transition">Diagnósticos</a>
+                <!-- Botón adaptado al nuevo fondo -->
+                <a href="#contacto" class="bg-nursing-darker text-white font-bold text-sm py-2 px-5 rounded-full hover:bg-nursing-dark transition shadow-md">Solicitar Asistencia</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="bg-gradient-to-r from-nursing-darker via-nursing-dark to-nursing DEFAULT text-white py-24 px-6 relative overflow-hidden">
+            <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center relative z-10 gap-12">
+                <div class="lg:w-3/5 text-center lg:text-left">
+                    <span class="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-nursing-light text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-6">
+                        Atención Profesional Residencial
+                    </span>
+                    <h2 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight">
+                        Cuidado profesional en la <span class="text-nursing-light">comodidad de su hogar</span>
+                    </h2>
+                    <p class="text-lg md:text-xl mb-8 text-blue-100 max-w-2xl leading-relaxed">
+                        Brindamos un ecosistema de salud integral con personal de enfermería rigurosamente seleccionado. Fusionamos idoneidad clínica, empatía y vocación.
+                    </p>
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <a href="#contacto" class="w-full sm:w-auto text-center bg-white text-nursing-darker font-bold py-4 px-8 rounded-full shadow-xl hover:bg-nursing-light transition duration-300">
+                            Iniciar Evaluación
+                        </a>
+                        <a href="#servicios" class="w-full sm:w-auto text-center border-2 border-white text-white font-bold py-3.5 px-8 rounded-full hover:bg-white/10 transition">
+                            Ver Servicios
+                        </a>
+                    </div>
+                </div>
+                <div class="lg:w-2/5 flex justify-center w-full">
+                    <div class="bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/20 text-center shadow-2xl w-full max-w-sm">
+                        <div class="w-20 h-20 mx-auto bg-white/20 text-white rounded-full flex items-center justify-center mb-6">
+                            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                        </div>
+                        <p class="text-3xl font-bold text-white">Garantía Inés</p>
+                        <p class="text-nursing-light mt-2 font-medium">Disponibles 24/7</p>
+                        <div class="mt-6 pt-6 border-t border-white/20 grid grid-cols-2 gap-4 text-left">
+                            <div>
+                                <p class="text-xs text-blue-200">Supervisión</p>
+                                <p class="text-sm font-bold text-white">Médica Continua</p>
+                            </div>
+                            <div>
+                                <p class="text-xs text-blue-200">Respuesta</p>
+                                <p class="text-sm font-bold text-white">Inmediata</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="servicios" class="max-w-7xl mx-auto py-20 px-6">
+            <div class="text-center mb-16">
+                <h3 class="text-3xl md:text-4xl font-bold text-nursing-darker mb-4">Servicios Especializados</h3>
+                <p class="text-slate-500 max-w-2xl mx-auto">Más allá del acompañamiento, brindamos procedimientos clínicos seguros en su domicilio.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-md border-t-4 border-nursing-DEFAULT card-hover text-center">
+                    <div class="bg-nursing-light text-nursing-dark w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-nursing-darker mb-3">Terapia de Vitaminas</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">Administración segura de megadosis de Vitamina C, sueroterapia e hidratación bajo estricta indicación médica para optimizar el sistema inmunológico.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-md border-t-4 border-nursing-DEFAULT card-hover text-center">
+                    <div class="bg-nursing-light text-nursing-dark w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-nursing-darker mb-3">Procedimientos Clínicos</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">Colocación y cuidado de sondas (nasogástricas, Foley), manejo de vías endovenosas e intramusculares por personal capacitado.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-md border-t-4 border-nursing-DEFAULT card-hover text-center">
+                    <div class="bg-nursing-light text-nursing-dark w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-nursing-darker mb-3">Curación de Heridas</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">Tratamiento de úlceras por presión (escaras), heridas quirúrgicas y pie diabético, implementando técnicas y parches avanzados.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="cuidados" class="bg-nursing-light/50 py-20 px-6">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-16">
+                    <h3 class="text-3xl md:text-4xl font-bold text-nursing-darker mb-4">Nuestros Pilares de Cuidado</h3>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
+                        <h5 class="text-lg font-bold text-nursing-dark mb-2">Higiene & Confort</h5>
+                        <p class="text-slate-600 text-sm leading-relaxed">Baño en cama o asistido, cuidado de la piel y cambios posturales programados para evitar ulceraciones.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
+                        <h5 class="text-lg font-bold text-nursing-dark mb-2">Monitoreo Vital</h5>
+                        <p class="text-slate-600 text-sm leading-relaxed">Control estricto de presión arterial, saturación, frecuencia cardíaca y glucometría capilar.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
+                        <h5 class="text-lg font-bold text-nursing-dark mb-2">Soporte Nutricional</h5>
+                        <p class="text-slate-600 text-sm leading-relaxed">Asistencia alimentaria especializada, controlando texturas y volúmenes según prescripción.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
+                        <h5 class="text-lg font-bold text-nursing-dark mb-2">Acompañamiento</h5>
+                        <p class="text-slate-600 text-sm leading-relaxed">Estimulación cognitiva y mantenimiento de rutinas saludables orientadas a la tranquilidad del paciente.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="diagnosticos" class="max-w-7xl mx-auto py-20 px-6">
+            <div class="text-center mb-16">
+                <h3 class="text-3xl md:text-4xl font-bold text-nursing-darker mb-4">Diagnósticos Clínicos que Atendemos</h3>
+                <p class="text-slate-500 max-w-2xl mx-auto">Adaptamos nuestros planes al perfil diagnóstico del médico tratante.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-slate-50 p-6 rounded-xl border-l-4 border-nursing-DEFAULT flex gap-4 items-start shadow-sm">
+                    <div class="text-nursing-DEFAULT font-bold text-xl">01</div>
+                    <div>
+                        <h4 class="font-bold text-slate-800 mb-1">Enfermedades Neurodegenerativas</h4>
+                        <p class="text-slate-600 text-sm">Alzheimer, Demencia Vascular, Parkinson y ELA.</p>
+                    </div>
+                </div>
+                <div class="bg-slate-50 p-6 rounded-xl border-l-4 border-nursing-DEFAULT flex gap-4 items-start shadow-sm">
+                    <div class="text-nursing-DEFAULT font-bold text-xl">02</div>
+                    <div>
+                        <h4 class="font-bold text-slate-800 mb-1">Cerebrovasculares (ACV)</h4>
+                        <p class="text-slate-600 text-sm">Rehabilitación pasiva y asistencia a secuelas de infartos cerebrales.</p>
+                    </div>
+                </div>
+                <div class="bg-slate-50 p-6 rounded-xl border-l-4 border-nursing-DEFAULT flex gap-4 items-start shadow-sm">
+                    <div class="text-nursing-DEFAULT font-bold text-xl">03</div>
+                    <div>
+                        <h4 class="font-bold text-slate-800 mb-1">Oncológicos / Paliativos</h4>
+                        <p class="text-slate-600 text-sm">Manejo del dolor y acompañamiento compasivo avanzado.</p>
+                    </div>
+                </div>
+                <div class="bg-slate-50 p-6 rounded-xl border-l-4 border-nursing-DEFAULT flex gap-4 items-start shadow-sm">
+                    <div class="text-nursing-DEFAULT font-bold text-xl">04</div>
+                    <div>
+                        <h4 class="font-bold text-slate-800 mb-1">Post-Quirúrgicos</h4>
+                        <p class="text-slate-600 text-sm">Cuidado de cirugías mayores, reemplazos articulares y post-alta de UCI.</p>
+                    </div>
+                </div>
+                <div class="bg-slate-50 p-6 rounded-xl border-l-4 border-nursing-DEFAULT flex gap-4 items-start shadow-sm">
+                    <div class="text-nursing-DEFAULT font-bold text-xl">05</div>
+                    <div>
+                        <h4 class="font-bold text-slate-800 mb-1">Síndromes Geriátricos</h4>
+                        <p class="text-slate-600 text-sm">Control de diabetes descompensada, hipertensión y fragilidad senil.</p>
+                    </div>
+                </div>
+                <div class="bg-slate-50 p-6 rounded-xl border-l-4 border-nursing-DEFAULT flex gap-4 items-start shadow-sm">
+                    <div class="text-nursing-DEFAULT font-bold text-xl">06</div>
+                    <div>
+                        <h4 class="font-bold text-slate-800 mb-1">Insuficiencia Renal</h4>
+                        <p class="text-slate-600 text-sm">Monitoreo hídrico estricto y cuidado de accesos para diálisis.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-nursing-darker text-white py-16 px-6">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <h4 class="text-2xl font-bold text-nursing-light mb-2">Turnos 24x24</h4>
+                    <p class="text-sm text-blue-200">Cobertura total con relevo interdiario.</p>
+                </div>
+                <div>
+                    <h4 class="text-2xl font-bold text-nursing-light mb-2">Cama Adentro</h4>
+                    <p class="text-sm text-blue-200">Personal residente para cuidado permanente.</p>
+                </div>
+                <div>
+                    <h4 class="text-2xl font-bold text-nursing-light mb-2">Turno Día</h4>
+                    <p class="text-sm text-blue-200">Asistencia diurna en administración de terapias.</p>
+                </div>
+                <div>
+                    <h4 class="text-2xl font-bold text-nursing-light mb-2">Turno Noche</h4>
+                    <p class="text-sm text-blue-200">Cuidados preventivos para el descanso familiar.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="contacto" class="bg-slate-100 py-20 px-6">
+            <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col md:flex-row border border-slate-200">
+                <div class="md:w-5/12 bg-nursing-darker text-white p-10 flex flex-col justify-center relative">
+                    <div class="relative z-10">
+                        <h3 class="text-3xl font-bold mb-4">¿Necesita asistencia?</h3>
+                        <p class="mb-6 text-blue-100 text-sm">Déjenos los datos del paciente y nuestro equipo de coordinación clínica evaluará el caso de forma completamente confidencial.</p>
+                        <div class="flex items-center gap-3 mb-4">
+                            <svg class="w-6 h-6 text-nursing-light" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                            <span class="font-semibold">Información 100% segura</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- SECCIÓN DE CONTACTO COMPLETADA -->
+                <div class="md:w-7/12 p-10 relative">
+                    <form class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-1">Nombre Completo</label>
+                            <input type="text" class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-nursing-DEFAULT focus:border-nursing-DEFAULT outline-none transition" placeholder="Ej. Juan Pérez">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-1">Teléfono / Celular</label>
+                            <input type="tel" class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-nursing-DEFAULT focus:border-nursing-DEFAULT outline-none transition" placeholder="Ej. 987 654 321">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-1">Motivo de la consulta</label>
+                            <textarea rows="3" class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-nursing-DEFAULT focus:border-nursing-DEFAULT outline-none transition" placeholder="Describa brevemente la situación del paciente..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-nursing-DEFAULT text-white font-bold py-3 px-4 rounded-lg hover:bg-nursing-dark transition shadow-md mt-2">
+                            Enviar Solicitud
+                        </button>
+                    </form>
+
+                    <div id="mensajeExito" class="hidden absolute inset-0 bg-white z-20 flex-col items-center justify-center text-center animate-fade-in p-10">
+                        <div class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        </div>
+                        <h4 class="text-xl font-bold text-slate-800 mb-2">¡Solicitud Enviada!</h4>
+                        <p class="text-slate-600">Nos pondremos en contacto con usted a la brevedad posible.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-slate-900 text-slate-400 py-8 text-center border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-6">
+            <p>&copy; 2026 Santa Inés - Servicio de Enfermería Geriátrica. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
